@@ -1,11 +1,10 @@
 #include <iostream>
-#include "display.h"
+#include "Application.h"
+#if 0
 #include <glib-2.0/glib.h>
-
 static GMainLoop* g_main_loop = nullptr;
+#endif
 
-int main() {
-    Rect rect(2,3,4,5);
-    std::cout << "Hello world" << std::endl;
-    return 0;
+int main(int argc, char* argv[]) {
+    return Application::getInstance()->execute(argc, argv);
 }
